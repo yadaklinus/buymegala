@@ -14,7 +14,7 @@ export async function POST(req:NextRequest){
                 email
             },
             data:{
-                goLive:!user.goLive
+                goLive: Boolean(active)
             }
         })
         return NextResponse.json(ch,{status:200})

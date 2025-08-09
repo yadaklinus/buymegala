@@ -29,7 +29,7 @@ export default function Navbar() {
                 <>
                     <Link href={`/@${(data?.user?.email)?.split("@")[0]}`} onClick={()=>setIsMenuOpen(false)} className="text-gray-700 hover:bg-white/50 w-full text-left p-3 rounded-md text-base font-medium flex items-center"><User className="mr-3 h-5 w-5" /> My Page</Link>
                     <Link href={"/dashboard"} onClick={()=>setIsMenuOpen(false)} className="text-gray-700 hover:bg-white/50 w-full text-left p-3 rounded-md text-base font-medium flex items-center"><BarChart2 className="mr-3 h-5 w-5" /> Dashboard</Link>
-                    <Link href={"/"} onClick={()=>setIsMenuOpen(false)} className="text-gray-700 hover:bg-white/50 w-full text-left p-3 rounded-md text-base font-medium flex items-center"><Landmark className="mr-3 h-5 w-5" /> Withdraw</Link>
+                    <Link href={"/checkout"} onClick={()=>setIsMenuOpen(false)} className="text-gray-700 hover:bg-white/50 w-full text-left p-3 rounded-md text-base font-medium flex items-center"><Landmark className="mr-3 h-5 w-5" /> Withdraw</Link>
                     <Link href={"/setting"} onClick={()=>setIsMenuOpen(false)} className="text-gray-700 hover:bg-white/50 w-full text-left p-3 rounded-md text-base font-medium flex items-center"><SettingsIcon className="mr-3 h-5 w-5" /> Settings</Link>
                     <button onClick={()=>signOut()} className="bg-red-500 text-white hover:bg-red-600 w-full text-left mt-2 p-3 rounded-md text-base font-medium flex items-center"><LogOut className="mr-3 h-5 w-5" /> Sign Out</button>
                 </>
@@ -48,7 +48,7 @@ export default function Navbar() {
                     <div 
                         className="flex-shrink-0 flex items-center cursor-pointer"
                     >
-                        <Link className='flex items-align' href={"/"}>
+                        <Link className='flex items-align' href={'/'}>
                         <img width={30} src='/gala.png' alt="gala"/>
                         <span className="ml-2 text-2xl font-bold text-gray-800">Buy Me A Gala</span>
                         </Link>

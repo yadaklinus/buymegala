@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 const initialUserData = {
     username: 'elona',
@@ -15,7 +15,8 @@ const initialUserData = {
     ],
 };
 
-export default function WithdrawPage({ user=initialUserData }:{user:any}) {
+export default function WithdrawPage(){
+    const user = initialUserData;
     const totalEarnings = useMemo(() => user.supporters.reduce((acc:any, s:any) => acc + s.amount, 0), [user.supporters]);
 
     const handleWithdraw = (e:any) => {
