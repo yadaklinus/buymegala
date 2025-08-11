@@ -10,9 +10,9 @@ export async function POST(req:NextRequest){
             return NextResponse.json("Not Found",{status:404})
         }
 
-        // if(user.goLive === false){
-        //      return NextResponse.json("Not Found",{status:404})
-        // }
+        if(user.goLive === false){
+             return NextResponse.json("Not Found",{status:404})
+        }
 
         return NextResponse.json({
             userName:user?.userName,
